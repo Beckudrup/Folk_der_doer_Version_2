@@ -36,8 +36,8 @@ public class main extends PApplet {
         background(180);
 
         strokeWeight(5);
-        line(30, height-30, width-30, height-30);
-        line(30, 200, 30, height-30);
+        line(30, height-50, width-30, height-50);
+        line(30, 200, 30, height-50);
         strokeWeight(2);
         g.display(db,country,year);
 
@@ -56,6 +56,9 @@ public class main extends PApplet {
         year.display();
         country.display();
 fill(0);
+        textSize(16);
+        text("År 2014^^",50,height-25);
+        text("^^År 1900",width-120,height-25);
         textSize(32);
         text(year.inPut,320,140);
         text(country.inPut,320,70);
@@ -63,6 +66,9 @@ fill(0);
         text("Deaths:"+db.getData(year.inPut,country.inPut)/2,1200,70);
         text("County",100,50);
         text("Year",100,150);
+        textSize(16);
+        text("Over 1600 døde",10,180);
+
         fill(255);
 
     }
