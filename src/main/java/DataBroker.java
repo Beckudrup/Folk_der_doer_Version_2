@@ -30,6 +30,7 @@ public class DataBroker {
         for(int i = 0; i < dataListe.size(); i++){
             if( land.equalsIgnoreCase(dataListe.get(i).land) && year.equals(dataListe.get(i).year) ){
                 d = Integer.parseInt(dataListe.get(i).deaths);
+
             }
         }
         return d;

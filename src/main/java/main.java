@@ -3,8 +3,9 @@ import processing.core.PApplet;
 public class main extends PApplet {
 
     DataBroker db= new DataBroker();
-    indputField country = new indputField(300,30,600,50);
-    indputField year = new indputField(300,100,600,50);
+    indputField country = new indputField(300,30,300,50);
+    indputField year = new indputField(300,100,300,50);
+    Graph g = new Graph();
     public static void main(String[] args ) {
         PApplet.main("main");
     }
@@ -17,6 +18,8 @@ public class main extends PApplet {
         db.breakData();
         country.p = this;
         year.p = this;
+        g.p = this;
+
        // println(db.getData("ALBANIA",table.getInt(1,(int)random(4,table.getColumnCount()))));
         // println(db.getData(String.valueOf(2009),"HUNGARY"));
 
@@ -30,31 +33,38 @@ public class main extends PApplet {
 
     public void draw(){
         clear();
-        background(255);
+        background(180);
+
+        strokeWeight(5);
+        line(30, height-30, width-30, height-30);
+        line(30, 200, 30, height-30);
+        strokeWeight(2);
+        g.display(db,country,year);
+
+
         if (year.isInside==true){
             fill(255,0,0);
-            triangle(920,120,950,110,950,130);
+            triangle(620,120,650,110,650,130);
             fill(255,255,255);
         }
         if (country.isInside==true){
             fill(255,0,0);
-            triangle(920,50,950,40,950,60);
+            triangle(620,50,650,40,650,60);
             fill(255,255,255);
         }
-
+        fill(255);
         year.display();
         country.display();
-       /* System.out.println(country.inPut);
-        System.out.println(year.inPut);
-        */
-        fill(0);
+fill(0);
         textSize(32);
         text(year.inPut,320,140);
         text(country.inPut,320,70);
-        text("Deaths:"+db.getData(year.inPut,country.inPut),1200,70);
+        fill(255,255,0);
+        text("Deaths:"+db.getData(year.inPut,country.inPut)/2,1200,70);
         text("County",100,50);
         text("Year",100,150);
         fill(255);
+
     }
     public void mousePressed(){
 

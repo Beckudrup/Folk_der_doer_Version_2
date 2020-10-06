@@ -29,9 +29,9 @@ public void display(){
 }
 public void textInsideField(char key){
 if (isInside){
-    if (key==p.BACKSPACE){
+    if (key==p.BACKSPACE && inPut.length()>0){
         inPut= inPut.substring(0,inPut.length()-1);
-    }else {
+    }else if(key!=p.BACKSPACE) {
         inPut = inPut + key;
     }
 
