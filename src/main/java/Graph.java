@@ -4,12 +4,6 @@ public class Graph extends DataBroker {
 
 PApplet p;
 
-    Graph() {
-
-
-
-    }
-
     public void display(DataBroker db, indputField country, indputField year){
 
         for (int i = 0; i < 114; i++) {

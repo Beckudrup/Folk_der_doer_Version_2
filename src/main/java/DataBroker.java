@@ -13,9 +13,7 @@ public class DataBroker {
         String[] data = p.loadStrings("dnd.csv");
         String[] headers = data[0].split(";");
         for (int i = 0; i < data.length; i++) {
-            //p.println(data[i]);
             String[] cells = data[i].split(";");
-           // p.println(cells);
             for (int j = 1; j < cells.length; j++) {
 
                 String d = cells[j];

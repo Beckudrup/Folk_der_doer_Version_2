@@ -20,10 +20,6 @@ public class main extends PApplet {
         year.p = this;
         g.p = this;
 
-       // println(db.getData("ALBANIA",table.getInt(1,(int)random(4,table.getColumnCount()))));
-        // println(db.getData(String.valueOf(2009),"HUNGARY"));
-
-
     }
 
     @Override
