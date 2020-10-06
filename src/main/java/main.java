@@ -35,6 +35,7 @@ public class main extends PApplet {
         line(30, height-50, width-30, height-50);
         line(30, 200, 30, height-50);
         strokeWeight(2);
+        fill(0);
         g.display(db,country,year);
 
 
@@ -73,9 +74,13 @@ fill(0);
         year.click(mouseX,mouseY);
         country.click(mouseX,mouseY);
     }
-    public void keyTyped(){
-    country.textInsideField(key);
-    year.textInsideField(key);
+    public void keyTyped() {
+        country.textInsideField(key);
+        year.textInsideField(key);
+        if (country.isInside) {
+            g.t = 0;
+            g.k = 0;
+        }
     }
     }
 
