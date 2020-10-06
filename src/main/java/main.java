@@ -67,7 +67,7 @@ fill(0);
         text("County",100,50);
         text("Year",100,150);
         textSize(16);
-        text("Over 1600 døde",10,180);
+        text("Over 400 døde",10,180);
 
         fill(255);
 

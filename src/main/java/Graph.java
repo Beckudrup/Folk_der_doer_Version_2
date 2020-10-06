@@ -12,7 +12,7 @@ PApplet p;
 
     public void display(DataBroker db, indputField country, indputField year){
 
-        for (int i = 0; i <= 114; i++) {
+        for (int i = 0; i < 114; i++) {
             int yearInt = 2015-i;
             String yearString = yearInt+"";
             if(year.inPut.equalsIgnoreCase(yearString))
